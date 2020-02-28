@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="icon" type='' href="image/logo.ico">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div class="header">
+		<div class="logo">
+			<img src="image/logo.png" alt="">
+			<span class='d'>D</span>
+			<span class="o">O</span>
+			<span class="t">T</span>
+			<span class="a">A</span>
+		</div>
+	</div>
+	<div class="left-menu">
+		<dl class="menu-list">
+			<dt>学生管理</dt>
+			<dd class="active" data-id='student-list'>学生列表</dd>
+			<dd data-id='student-add'>新增学生</dd>
+			<dd data-id='student-charts'>学生统计</dd>
+		</dl>
+	</div>
+	<div class="right-content">
+		<div class="student-list content-active" id="student-list">
+			<table>
+				<thead>
+					<tr>
+						<th>学号</th>
+						<th>姓名</th>
+						<th>性别</th>
+						<th>邮箱</th>
+						<th>年龄</th>
+						<th>手机号</th>
+						<th>住址</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody id="table-body">
+					<tr>
+						<td>0001</td>
+						<td>小红</td>
+						<td>女</td>
+						<td>13254@qq.com</td>
+						<td>18324</td>
+						<td></td>
+						<td></td>
+						<td>
+							<button class="btn edit">编辑</button>
+							<button class="btn delete">删除</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="modal">
+				<div class="mask"></div>
+				<div class="content">
+					<h3>编辑信息</h3>
+						<form id="edit-form">
+							<div class="item">
+								<label for="name">姓名</label>
+								<input type="text" id='name' name='name'>
+							</div>
+							<div class="item">
+								<label for="sex">性别</label>
+								<input type="radio" name="sex" checked="" id="edit-male" value="0">
+								<label for="edit-male" class="sex">男</label>
+								
+								<input type="radio" name="sex" id="edit-female" value="1">
+								<label for="edit-female" class="sex">女</label>
+							</div>
+							<div class="item">
+								<label for="email">邮箱</label>
+								<input type="text" id='email' name='email'>
+							</div>
+							<div class="item">
+								<label for="sNo">学号</label>
+								<input type="text" id="sNo" name='sNo' readonly>
+							</div>
+							<div class="item">
+								<label for="birth">出生日期</label>
+								<input type="text" id='birth' name='birth'>
+							</div>
+							<div class="item">
+								<label for="phone">手机号</label>
+								<input type="text" id='phone' name='phone'>
+							</div>
+							<div class="item">
+								<label for="address">地址</label>
+								<input type="text" id='address' name='address'>
+							</div>
+							<div class="item">
+							<!-- 	<button>提交</button> -->
+								<label></label>
+								<input id="edit-student-btn" class="btn" type="submit" value="提交">
+							<!-- 	<input class="btn" type="reset" value="重置"> -->
+							</div>
+							
+						</form>
+				</div>
+			</div>
+			<div id="turn-page">
+				<!-- <button class="prev">上一页</button>
+				<button class="next">下一页</button> -->
+			</div>
+		</div>
+		<div class="student-add" id="student-add">
+			<form id="student-add-form">
+				<div class="item">
+					<label for="name">姓名</label>
+					<input type="text" name='name' id='name'>
+				</div>
+				<div class="item">
+					<label for="sex">性别</label>
+					<input type="radio" name="sex" checked="" id="male" value="0">
+					<label for="male" class="sex">男</label>
+					
+					<input type="radio" name="sex" id="female" value="1">
+					<label for="female" class="sex">女</label>
+				</div>
+				<div class="item">
+					<label for="email">邮箱</label>
+					<input type="text" name='email' id='email'>
+				</div>
+				<div class="item">
+					<label for="sNo">学号</label>
+					<input type="text" name='sNo' id='sNo'>
+				</div>
+				<div class="item">
+					<label for="birth">出生日期</label>
+					<input type="text" name='birth' id='birth'>
+				</div>
+				<div class="item">
+					<label for="phone">手机号</label>
+					<input type="text" name='phone' id='phone'>
+				</div>
+				<div class="item">
+					<label for="address">地址</label>
+					<input type="text" name='address' id='address'>
+				</div>
+				<div class="item">
+				<!-- 	<button>提交</button> -->
+					<label></label>
+					<input class="btn" type="submit" value="提交" id="add-student-btn">
+					<input class="btn" type="reset" value="重置">
+				</div>
+				
+			</form>
+		</div>
+		<div class="student-charts" id="student-charts">
+			<div id="chart1" class="chart1 chart"></div>
+			<div id="chart2" class="chart2 chart"></div>
+		</div>
+	</div>
+	<script src="./js/echarts.js"></script>
+	<script src="./js/jquery-3.3.1.js"></script>
+	<script src="./turnpage/index.js"></script>
+	<script src="./js/pie.js"></script>
+
+	<script src="./js/jqIndex.js"></script>
+
+	<!-- <script type="text/javascript" src='js/index.js'></script> -->
+</body>
+</html>

@@ -1,0 +1,231 @@
+/*body{
+	margin: 0;
+
+}*/
+*{
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100%;
+}
+.header{
+	height: 70px;
+	line-height: 70px;
+	background-color: #354457;
+	/*position: relative;
+	z-index: 1;*/
+}
+.header .logo{
+	width: 120px;
+	padding-left: 20px;
+	position: relative;
+}
+.header .logo img{
+	width: 	30px;
+	height: 30px;
+	vertical-align: middle;	
+}
+.header .logo span{
+	position: absolute;
+	font-weight: bold;
+	top:5px;
+	font-size: 18px;
+	text-shadow: 4px 2px 6px #000;
+	color: #b3bcc5;
+	animation: run 1.5s infinite;
+}
+.header .logo .d{
+	left: 60px;
+	animation-delay: 0s;
+}
+.header .logo .o{
+	left: 80px;
+	animation-delay: 0.25s;
+}
+.header .logo .t{
+	left: 100px;
+	animation-delay: 0.5s;
+}
+.header .logo .a{
+	left: 120px;
+	animation-delay: 0.75s;
+}
+@keyframes run{
+	0%{
+		top:5px
+	}
+	50%{
+		top:-5px
+	}
+	100%{
+		top:5px
+	}
+}
+
+.left-menu{
+	float: left;
+	width: 200px;
+	background-color: #4d5e70;
+	/*css 用于计算不同单位的方法*/
+	height: calc(100% - 70px);
+	/*height: 100%;
+	padding-top: 70px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;*/
+}
+.left-menu dl{
+	line-height: 40px;
+	font-size: 14px;
+	color: #b3bcc5;
+
+}
+.left-menu dl dt{
+	padding-left: 8px;
+	font-weight: bold;
+}
+.left-menu dl dd{
+	padding-left: 30px;
+	cursor: pointer;
+}
+.left-menu dl dd.active{
+	background-color: #ddd;
+	color: #354457;
+	
+}
+.left-menu dl dd:hover{
+	color: #354457;
+	background-color: rgba(255,255,255,0.5);
+}
+.right-content{
+	float: right;
+	width: calc(100% - 200px);
+	height: calc(100% - 70px);
+	background-color: #eee;
+	/* position: relative; */
+}
+/* .right-content > div{
+	position: absolute;
+} */
+.student-list{
+	display: none;
+	
+}
+#student-list table{
+	width: 100%;
+	text-align: center;
+	line-height: 30px;
+}
+#student-list table thead{
+	background-color: #e3e8ee;
+	color: #646987;
+	font-size: 14px;
+	height: 30px;
+}
+#student-list table tbody{
+	background-color: #fff;
+	font-style: 14px;
+
+}
+.student-list .btn{
+	padding:3px;
+	color: #fff;
+	font-size: 12px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.btn.edit{
+	background-color: #5cb85c;
+}
+.btn.delete{
+	background-color: #d9534f;
+}
+.student-list table .btn.edit:hover{
+	background-color: #398439;
+}
+.student-list table .btn.delete:hover{
+	background-color: #c9302c;
+} 
+.student-add,
+.student-charts{
+	display: none;
+	
+}
+#student-add form{
+	width: 400px;
+	margin: 50px auto;
+}
+
+form .item {
+	margin: 10px;
+
+}
+
+form .item label:not(.sex){
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+form .item label.sex{
+	cursor: pointer;
+}
+.item .btn{
+	padding:5px 25px;
+}
+.right-content .content-active{
+	display: block;
+}
+.student-charts .chart{
+	width: 500px;
+	height: 500px;
+	border: 1px solid #000;
+	float: left;
+}
+.modal{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+.mask{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+.modal .content{
+	background-color: #fff;
+	position: absolute;
+	width: 500px;
+	height: 450px;
+	left: 50%;
+	top: 50%;
+	margin-left: -250px;
+	margin-top: -225px;
+}
+.modal .content h3{
+	padding: 16px 30px;
+
+}
+.modal .content form{
+	width: 400px;
+	margin: 0 auto;
+}
+.modal .content input.btn{
+	margin-left: 32px;
+}
+#turn-page{
+	padding: 10px;
+	text-align: center;
+}
+#turn-page button{
+	display: inline-block;
+	border: none;
+	padding: 5px 10px;
+}
